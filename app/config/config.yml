@@ -97,3 +97,15 @@ swiftmailer:
       username:  '%email_username%'
       password:  '%email_password%'
       port:      '25'
+
+code_cloud_shopify:
+    store_manager_id: AppBundle\Service\StoreManagerService
+    oauth:
+        api_key: 0240c0bf26904863a4142dc04bdb786d
+        shared_secret: afd7faf9a1df62b0eb862fca71d18b5e
+        scope: "read_orders"
+        redirect_route: "dashboard"
+    webhooks:
+        - products/create
+        - orders/create
+        - customers/update
