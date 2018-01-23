@@ -40,7 +40,8 @@
         "sonata-project/google-authenticator": "1.x-dev",
         "defuse/php-encryption": "^2.1",
         "scrivo/highlight.php": "9.*",
-        "psy/psysh": "^0.8.15"
+        "psy/psysh": "^0.8.15",
+        "codecloud/symfony-shopify-bundle": "2.0.x-dev"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.0",
