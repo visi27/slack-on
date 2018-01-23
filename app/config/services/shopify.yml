@@ -1,0 +1,3 @@
+services:
+  AppBundle\Service\StoreManagerService:
+    arguments: ["@logger"]
