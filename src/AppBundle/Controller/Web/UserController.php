@@ -58,7 +58,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/dashboard", name="user_dashboard")
+     * @Route("/user_dashboard", name="user_dashboard")
      *
      * @return Response
      *
@@ -69,50 +69,5 @@ class UserController extends Controller
     public function dashboardAction()
     {
         return $this->render('account/dashboard_layout.html.twig');
-    }
-
-    /**
-     * @Route("/register", name="register_user")
-     *
-     * @param Request $request
-     *
-     * @param GuardAuthenticatorHandler $guardHandler
-     * @param LoginFormAuthenticator $authenticator
-     *
-     * @return Response
-     */
-    public function registerAction(
-        Request $request,
-        GuardAuthenticatorHandler $guardHandler,
-        LoginFormAuthenticator $authenticator
-    ) {
-        $form = $this->createForm(UserRegistrationForm::class);
-
-        $form->handleRequest($request);
-        if ($form->isValid()) {
-            /**
-             * @var User
-             */
-            $user = $form->getData();
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
-            $em->flush();
-
-            $this->addFlash('success', 'Welcome '.$user->getEmail());
-
-            return $guardHandler->authenticateUserAndHandleSuccess(
-                $user,
-                $request,
-                $authenticator,
-                'main'
-            );
-        }
-
-        return $this->render(
-            'user/register.html.twig',
-            [
-                'form' => $form->createView(),
-            ]
-        );
     }
 }
