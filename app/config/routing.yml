@@ -8,6 +8,9 @@ api:
     defaults:
       _format: json
 
+shopify:
+    resource: "@CodeCloudShopifyBundle/Resources/config/routing.yml"
+
 defaultCatchAll:
     path:     /api/{path}
     defaults:
