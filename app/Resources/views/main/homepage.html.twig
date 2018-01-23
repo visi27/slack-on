@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/highlight/solarized-light.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+    <!-- Blog Post Content Column -->
+    <div class="col-sm-12 col-md-12 col-lg-12">
+
+        <!-- Blog Post -->
+
+        <!-- Title -->
+        <h1>Symfony Skeleton Application</h1>
+
+        <!-- Author -->
+        <p class="lead">
+            by <a href="#">Evis Bregu</a>
+        </p>
+
+        <hr>
+
+        <!-- Post Content -->
+        <pre class="hljs {{ language }}">{{ content | raw }}</pre>
+        <hr>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+app:
+    resource: "@AppBundle/Controller/Web"
+    type:     annotation
+
+api:
+    resource: "@AppBundle/Controller/Api"
+    type:     annotation
+    defaults:
+      _format: json
+
+defaultCatchAll:
+    path:     /api/{path}
+    defaults:
+        _controller: AppBundle:Api\ApiVersion:handleVersion
+        path: /
+        permanent: true
+    requirements:
+        path: ".+"
+
+homepage:
+  schemes: "http"
+  path: /
+  defaults:
+    _controller: AppBundle:Web/Main:homepage
