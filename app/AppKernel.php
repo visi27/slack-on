@@ -1,6 +1,5 @@
 <?php
 
-
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
@@ -31,6 +30,7 @@ class AppKernel extends Kernel
             new Bazinga\Bundle\HateoasBundle\BazingaHateoasBundle(),
             new AppBundle\AppBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new CodeCloud\Bundle\ShopifyBundle\CodeCloudShopifyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
