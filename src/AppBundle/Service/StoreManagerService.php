@@ -40,7 +40,7 @@ class StoreManagerService implements ShopifyStoreManagerInterface
      */
     public function authenticateStore($storeName, $accessToken)
     {
-        $this->logger->info(sprintf("Authenticated '%s' and got access token '%s'", $storeName, $accessToken));
+        $this->logger->critical(sprintf("Authenticated '%s' and got access token '%s'", $storeName, $accessToken));
         // TODO: Implement authenticateStore() method.
     }
 }

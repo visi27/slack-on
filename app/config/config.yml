@@ -103,7 +103,7 @@ code_cloud_shopify:
     oauth:
         api_key: 0240c0bf26904863a4142dc04bdb786d
         shared_secret: afd7faf9a1df62b0eb862fca71d18b5e
-        scope: "read_orders"
+        scope: "read_orders, read_products"
         redirect_route: "dashboard"
     webhooks:
         - products/create

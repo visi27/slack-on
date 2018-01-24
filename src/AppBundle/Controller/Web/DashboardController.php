@@ -25,7 +25,7 @@ class DashboardController extends Controller
      */
     public function dashboardAction(Request $request)
     {
-        dump($request);
-        return new Response("OK", 200);
+        //dump($request);
+        return $this->render('shopify/dashboard.html.twig');
     }
 }

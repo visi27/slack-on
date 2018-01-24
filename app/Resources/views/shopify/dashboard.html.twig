@@ -1,0 +1,29 @@
+<head>
+  <script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
+  <script type="text/javascript">
+      ShopifyApp.init({
+          apiKey: '0240c0bf26904863a4142dc04bdb786d',
+          shopOrigin: 'https://slackon.myshopify.com'
+      });
+  </script>
+
+  <script type="text/javascript">
+      ShopifyApp.ready(function(){
+          ShopifyApp.Bar.initialize({
+              icon: 'http://localhost:3001/assets/header-icon.png',
+              title: 'The App Title',
+              buttons: {
+                  primary: {
+                      label: 'Save',
+                      message: 'save',
+                      callback: function(){
+                          ShopifyApp.Bar.loadingOn();
+                          //doSomeCustomAction();
+                      }
+                  }
+              }
+          });
+      });
+  </script>
+
+</head>
